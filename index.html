@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Báo cáo Tổ Đảng định kỳ hằng tháng</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%2790%27 font-size=%2790%27>📝</text></svg>">
+<style>
+:root{--red:#8b1111;--red2:#c4161c;--gold:#ffcd38;--bg:#fff3f0;--card:#ffffffcc;--text:#1f1717;--muted:#a39a98;--line:#e3c3bf;--ok:#1b7a3a;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--red:#ff8f86;--red2:#d42a2a;--bg:#170f0f;--card:#251a1acc;--text:#f4eae8;--muted:#8a7b78;--line:#4a2d2d;--ok:#6fd08c;color-scheme:dark}}
+:root[data-theme="dark"]{--red:#ff8f86;--red2:#d42a2a;--bg:#170f0f;--card:#251a1acc;--text:#f4eae8;--muted:#8a7b78;--line:#4a2d2d;--ok:#6fd08c;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.45;min-height:100vh}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;align-items:center;gap:12px;background:linear-gradient(90deg,#6e0c0a,#a31512);color:#fff;padding:10px 18px;font-weight:800;letter-spacing:.03em;box-shadow:0 4px 18px #0004}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:#6e0c0a;z-index:6}
+.logo{width:44px;height:44px;border-radius:50%;background:radial-gradient(circle,#e11d1d,#9d0f0f);display:grid;place-items:center;color:var(--gold);font-size:1.4rem;box-shadow:0 0 0 3px #ffcd3855;overflow:hidden;flex:none}
+.logo img{width:100%;height:100%;object-fit:cover}
+.hero{position:relative;overflow:hidden;text-align:center;padding:54px 16px 90px;background:linear-gradient(160deg,#7a0d0b,#c4161c 55%,#e8481f);color:#fff}
+.hero h1{position:relative;z-index:2;margin:0;font-size:clamp(1.6rem,5.6vw,3rem);line-height:1.25;text-shadow:0 3px 14px #0007;animation:rise .9s both}
+.hero p{position:relative;z-index:2;margin:10px 0 0;opacity:.9;animation:rise .9s .15s both}
+.star{position:absolute;color:var(--gold);animation:tw 3s infinite ease-in-out;opacity:.7}
+.city{position:absolute;left:0;right:0;bottom:0;height:90px;z-index:1}
+.city svg{width:200%;height:100%;animation:drift 40s linear infinite}
+@keyframes drift{to{transform:translateX(-50%)}}
+@keyframes tw{50%{opacity:.15;transform:scale(.6) rotate(25deg)}}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}}
+main{max-width:780px;margin:-48px auto 50px;padding:0 14px;position:relative;z-index:3}
+.card{background:var(--card);backdrop-filter:blur(10px);border:2px solid var(--line);border-radius:28px;padding:22px 22px 26px;box-shadow:0 18px 50px #5a0c0c33}
+.prog{display:flex;justify-content:space-between;position:relative;margin:4px 6px 22px}
+.prog::before,.bar{content:"";position:absolute;top:16px;left:16px;right:16px;height:4px;border-radius:4px;background:var(--line)}
+.bar{background:linear-gradient(90deg,var(--red2),var(--gold));right:auto;width:0;transition:width .5s cubic-bezier(.4,0,.2,1)}
+.dot{position:relative;z-index:1;text-align:center;font-size:.7rem;color:var(--muted);width:56px}
+.dot i{display:grid;place-items:center;width:36px;height:36px;margin:0 auto 4px;border-radius:50%;background:var(--bg);border:3px solid var(--line);font-style:normal;font-weight:800;transition:.4s}
+.dot.on i{border-color:var(--red2);color:var(--red);transform:scale(1.12);box-shadow:0 0 0 5px #c4161c22}
+.dot.done i{background:var(--red2);border-color:var(--red2);color:#fff}
+.dot.on,.dot.done{color:var(--red);font-weight:700}
+.step{display:none}
+.step.active{display:block;animation:slide .45s cubic-bezier(.2,.8,.2,1)}
+.step.back{animation-name:slideb}
+@keyframes slide{from{opacity:0;transform:translateX(40px)}}
+@keyframes slideb{from{opacity:0;transform:translateX(-40px)}}
+h2{margin:0 0 4px;color:var(--red);font-size:1.45rem}
+.sub{margin:0 0 8px;color:var(--muted);font-size:.9rem}
+.f{margin-top:16px}
+label{display:block;margin-bottom:6px;font-weight:700;color:var(--red)}
+input,select,textarea{width:100%;font:inherit;color:var(--text);background:transparent;border:2px solid var(--line);border-radius:18px;padding:13px 16px;transition:border-color .25s,box-shadow .25s,transform .25s}
+input:focus,select:focus,textarea:focus{outline:0;border-color:var(--red2);box-shadow:0 0 0 4px #c4161c22;transform:translateY(-1px)}
+textarea{min-height:110px;resize:vertical}
+::placeholder{color:var(--muted)}
+.bad input,.bad select,.bad textarea{border-color:#e53935;animation:shake .35s}
+.err{display:none;color:#e53935;font-size:.85rem;margin-top:4px}.bad .err{display:block}
+@keyframes shake{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.rules{background:#c4161c12;border-left:5px solid var(--red2);border-radius:14px;padding:10px 16px;margin-top:14px}.rules p{margin:3px 0}
+.nav{display:flex;gap:12px;margin-top:26px}
+.btn{flex:1;padding:14px;font:inherit;font-weight:800;border:0;border-radius:999px;cursor:pointer;color:#fff;background:linear-gradient(90deg,#9d0f0f,#d42a2a);box-shadow:0 8px 20px #c4161c44;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px #c4161c55}.btn:active{transform:scale(.97)}
+.btn.alt{background:transparent;color:var(--red);border:2px solid var(--line);box-shadow:none}
+.btn:disabled{opacity:.6}
+.hide{display:none!important}
+.msg{margin-top:14px;padding:12px 16px;border-radius:16px;border:2px solid #e53935;display:none}.msg.show{display:block}
+.done-box{text-align:center;padding:20px 6px;animation:rise .6s both}
+.done-box svg{width:96px;height:96px}
+.done-box circle,.done-box path{fill:none;stroke:var(--ok);stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:300;stroke-dashoffset:300;animation:dr .9s .1s forwards}
+.done-box path{animation-delay:.6s;stroke-dasharray:60;stroke-dashoffset:60}
+@keyframes dr{to{stroke-dashoffset:0}}
+.table-wrap{overflow-x:auto;margin-top:12px}table{border-collapse:collapse;font-size:.85rem;min-width:100%}th,td{border:1px solid var(--line);padding:6px 8px;white-space:nowrap;text-align:left}
+details{margin-top:24px}summary{cursor:pointer;color:var(--red);font-weight:700}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+@media (max-width:520px){.dot span{display:none}.dot{width:36px}}
+</style>
+</head>
+<body>
+<div class="top"><div class="logo" id="logo">★</div><span id="org"></span></div>
+<div class="hero">
+ <span class="star" style="left:8%;top:30px;font-size:1.6rem">★</span><span class="star" style="right:10%;top:60px;font-size:1.2rem;animation-delay:1s">★</span><span class="star" style="left:24%;bottom:110px;font-size:1rem;animation-delay:2s">★</span><span class="star" style="right:26%;bottom:100px;font-size:1.4rem;animation-delay:.5s">★</span>
+ <h1 id="t1"></h1><p id="t2"></p>
+ <div class="city"><svg viewBox="0 0 1200 90" preserveAspectRatio="none"><g fill="#fff" opacity=".18"><rect x="0" y="40" width="40" height="50"/><rect x="50" y="15" width="34" height="75"/><rect x="95" y="50" width="50" height="40"/><rect x="155" y="25" width="30" height="65"/><rect x="200" y="45" width="60" height="45"/><rect x="275" y="8" width="36" height="82"/><rect x="325" y="38" width="48" height="52"/><rect x="385" y="22" width="30" height="68"/><rect x="430" y="48" width="64" height="42"/><rect x="510" y="12" width="34" height="78"/><rect x="560" y="40" width="50" height="50"/><rect x="625" y="28" width="30" height="62"/><rect x="670" y="46" width="62" height="44"/><rect x="748" y="10" width="36" height="80"/><rect x="800" y="36" width="48" height="54"/><rect x="862" y="24" width="30" height="66"/><rect x="905" y="48" width="60" height="42"/><rect x="980" y="14" width="34" height="76"/><rect x="1030" y="40" width="50" height="50"/><rect x="1095" y="26" width="30" height="64"/><rect x="1140" y="46" width="60" height="44"/></g><path d="M0 90V70q30-14 60 0t60 0 60 0 60 0 60 0 60 0 60 0 60 0 60 0 60 0 60 0 60 0 60 0 60 0 60 0 60 0 60 0 60 0 60 0 60 0 60 0V90z" fill="var(--bg)"/></svg></div>
+</div>
+<main>
+<div class="card" id="card">
+ <div id="wiz">
+  <div class="prog"><div class="bar" id="bar"></div><div id="dots" style="display:contents"></div></div>
+  <div id="steps"></div>
+  <div class="msg" id="msg" role="alert"></div>
+  <div class="nav"><button class="btn alt" id="prev" type="button">← Quay lại</button><button class="btn" id="next" type="button">Tiếp tục →</button></div>
+  <button class="btn alt hide" id="copy" type="button" style="width:100%;margin-top:12px">Sao chép nội dung báo cáo</button>
+ </div>
+ <div class="done-box hide" id="done">
+  <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="44"/><path d="M30 52l14 14 27-30"/></svg>
+  <h2 style="margin-top:10px">Gửi báo cáo thành công!</h2>
+  <p class="sub">Muốn sửa, hãy điền lại cùng mã sinh viên, tháng, học kỳ, năm học và gửi lần nữa.</p>
+  <button class="btn" id="again" type="button" style="max-width:300px">Gửi báo cáo khác</button>
+ </div>
+</div>
+</main>
+<script>
+/* ===== CẤU HÌNH: sửa nội dung ở đây ===== */
+const CONFIG={
+ endpoint:"",                    // DÁN LINK Google Apps Script (Web app URL) vào đây
+ org:"SINH VIÊN KHỐI KỸ THUẬT 2",
+ title1:"BÁO CÁO TỔ ĐẢNG",
+ title2:"ĐỊNH KỲ HẰNG THÁNG",
+ logo:"",                       // dán ảnh logo dạng data:image/... hoặc để trống để dùng ngôi sao
+ toList:["Công nghệ thông tin"],// danh sách Tổ Đảng
+ years:["Năm học 2024-2025","Năm học 2025-2026","Năm học 2026-2027"],
+ defaultYear:"Năm học 2025-2026",
+ semesters:["Học kỳ 1","Học kỳ 2","Học kỳ hè"],
+ grades:["Xuất sắc","Giỏi","Khá","Trung bình","Yếu"],
+ rules:["Đảm bảo không vắng quá số buổi theo Điều lệ Đảng","Thực hiện thông tin nhanh đến cấp ủy Chi bộ","Thực hiện mail xin vắng đến cấp ủy Chi bộ","Thực hiện nộp đơn xin vắng bản cứng và bản mềm"]
+};
+const YN=["Không","Có"];
+const months=Array.from({length:12},(_,i)=>"Tháng "+(i+1));
+const STEPS=[
+ {t:"I. Thông tin cá nhân",s:"Thông tin",f:[
+  {id:"mssv",l:"1.1. Mã sinh viên",ph:"Nhập mã sinh viên",req:1},
+  {id:"ten",l:"1.2. Họ và tên",ph:"Nhập họ và tên",req:1},
+  {id:"to",l:"1.3. Tổ Đảng",o:CONFIG.toList},
+  {id:"dv",l:"1.4. Đảng viên",o:["Chính thức","Dự bị"]},
+  {id:"thang",l:"1.5. Báo cáo tháng (theo tháng họp Chi bộ)",o:months,d:"Tháng "+(new Date().getMonth()+1)},
+  {id:"hk",l:"1.6. Học kỳ báo cáo (theo dữ liệu học tập, rèn luyện)",o:CONFIG.semesters},
+  {id:"nh",l:"1.7. Năm học báo cáo (theo dữ liệu học tập, rèn luyện)",o:CONFIG.years,d:CONFIG.defaultYear}]},
+ {t:"II. Về lập trường tư tưởng, chính trị",s:"Tư tưởng",f:[
+  {id:"tdb",l:"2.1. Tự diễn biến, tự chuyển hóa",o:YN,ch:1},
+  {id:"st",l:"2.2. Suy thoái về tư tưởng chính trị",o:YN,ch:1},
+  {id:"nx2",l:"2.3. Tự nhận xét",a:1,ph:"VD: Không có tự diễn biến, tự chuyển hóa"}]},
+ {t:"III. Về tình hình điểm rèn luyện",s:"Rèn luyện",f:[
+  {id:"drl",l:"3.1. Điểm rèn luyện hiện tại",n:1,ph:"0 - 100"},
+  {id:"vpnq",l:"3.2. Vi phạm nội quy",o:YN,ch:1},
+  {id:"vppl",l:"3.3. Vi phạm pháp luật",o:YN,ch:1},
+  {id:"nx3",l:"3.4. Tự nhận xét",a:1,ph:"VD: Thực hiện rèn luyện tốt, không vi phạm"}]},
+ {t:"IV. Về tình hình kết quả học tập",s:"Học tập",f:[
+  {id:"tdg",l:"4.1. Tự đánh giá kết quả học tập",o:CONFIG.grades,ch:1},
+  {id:"tb",l:"4.2. Tổng kết trung bình học kỳ",ph:"X.XX hoặc “Chưa có”",req:1},
+  {id:"nx4",l:"4.3. Tự nhận xét",a:1,ph:"Thực hiện học tập tốt, không có kết quả xấu hoặc điểm giữa kỳ môn ... đạt ... do sơ suất trong học tập"}]},
+ {t:"VI. Báo cáo tham gia sinh hoạt Chi bộ",s:"Sinh hoạt",rules:1,f:[
+  {id:"sh",l:"6.1. Có thể tham gia sinh hoạt hay không?",o:["Có thể tham gia","Không thể tham gia"]},
+  {id:"lydo",l:"6.2. Lý do không thể tham gia",a:1,ph:"Nhập lý do",cond:1}]}];
+const COLS=[["mssv","Mã SV"],["ten","Họ và tên"],["to","Tổ Đảng"],["dv","Đảng viên"],["thang","Tháng"],["hk","Học kỳ"],["nh","Năm học"],["tdb","Tự diễn biến"],["st","Suy thoái"],["nx2","Nhận xét (II)"],["drl","Điểm rèn luyện"],["vpnq","Vi phạm nội quy"],["vppl","Vi phạm pháp luật"],["nx3","Nhận xét (III)"],["tdg","Tự đánh giá học tập"],["tb","TB học kỳ"],["nx4","Nhận xét (IV)"],["sh","Sinh hoạt Chi bộ"],["lydo","Lý do vắng"],["time","Thời gian gửi"]];
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+$("org").textContent=CONFIG.org;$("t1").textContent=CONFIG.title1;$("t2").textContent=CONFIG.title2;
+if(CONFIG.logo)$("logo").innerHTML='<img alt="" src="'+CONFIG.logo+'">';
+/* dựng form */
+$("steps").innerHTML=STEPS.map((s,i)=>'<div class="step" data-i="'+i+'"><h2>'+s.t+'</h2><p class="sub">Bước '+(i+1)+'/'+STEPS.length+'</p>'+
+ (s.rules?'<div class="rules">'+CONFIG.rules.map(r=>'<p>- '+esc(r)+'</p>').join("")+'</div>':"")+
+ s.f.map(f=>{let c;
+  if(f.o)c='<select id="'+f.id+'">'+(f.ch?'<option value="">-- Chọn --</option>':"")+f.o.map(o=>'<option'+(o===f.d?" selected":"")+'>'+esc(o)+'</option>').join("")+'</select>';
+  else if(f.a)c='<textarea id="'+f.id+'" placeholder="'+esc(f.ph)+'"></textarea>';
+  else c='<input id="'+f.id+'" '+(f.n?'type="number" min="0" max="100" step="1" inputmode="numeric" ':'')+'placeholder="'+esc(f.ph||"")+'" autocomplete="off">';
+  return '<div class="f'+(f.cond?' hide':'')+'" id="w_'+f.id+'"><label for="'+f.id+'">'+f.l+'</label>'+c+'<div class="err"></div></div>'}).join("")+'</div>').join("");
+$("dots").innerHTML=STEPS.map((s,i)=>'<div class="dot" id="d'+i+'"><i>'+(i+1)+'</i><span>'+s.s+'</span></div>').join("");
+$("sh").onchange=()=>$("w_lydo").classList.toggle("hide",$("sh").value!=="Không thể tham gia");
+let cur=0;
+function go(n,back){
+ cur=n;
+ document.querySelectorAll(".step").forEach((e,i)=>{e.classList.toggle("active",i===n);e.classList.toggle("back",!!back)});
+ STEPS.forEach((_,i)=>{const d=$("d"+i);d.classList.toggle("on",i===n);d.classList.toggle("done",i<n)});
+ $("bar").style.width=(n/(STEPS.length-1))*(100)+"%";$("bar").style.maxWidth="calc(100% - 32px)";
+ $("prev").classList.toggle("hide",n===0);
+ $("next").textContent=n===STEPS.length-1?"GỬI BÁO CÁO ✔":"Tiếp tục →";
+ $("msg").className="msg";window.scrollTo({top:0,behavior:"smooth"});
+}
+function setErr(f,t){const w=$("w_"+f.id);w.classList.add("bad");w.querySelector(".err").textContent=t}
+function check(i){
+ let ok=true,first=null;
+ STEPS[i].f.forEach(f=>{
+  const w=$("w_"+f.id);w.classList.remove("bad");
+  if(f.cond)return;
+  const v=$(f.id).value.trim();
+  let e="";
+  if(!v)e="Vui lòng nhập mục này.";
+  else if(f.n&&!(Number(v)>=0&&Number(v)<=100))e="Điểm phải từ 0 đến 100.";
+  if(!e&&f.id==="lydo"&&$("sh").value==="Không thể tham gia"&&!v)e="Vui lòng nhập lý do.";
+  if(e){setErr(f,e);ok=false;first=first||$(f.id)}});
+ if(STEPS[i].f.some(f=>f.id==="lydo")&&$("sh").value==="Không thể tham gia"&&!$("lydo").value.trim()){setErr({id:"lydo"},"Vui lòng nhập lý do.");ok=false;first=first||$("lydo")}
+ if(first)first.focus();return ok;
+}
+document.querySelectorAll("input,select,textarea").forEach(e=>e.addEventListener("input",()=>$("w_"+e.id).classList.remove("bad")));
+function collect(){const d={};COLS.forEach(([k])=>{if($(k))d[k]=$(k).value.trim()});if(d.sh!=="Không thể tham gia")d.lydo="";d.time=new Date().toLocaleString("vi-VN");return d}
+const asText=d=>COLS.map(([k,l])=>l+": "+(d[k]||"")).join("\n");
+$("prev").onclick=()=>go(cur-1,true);
+$("next").onclick=async()=>{
+ if(!check(cur))return;
+ if(cur<STEPS.length-1){go(cur+1);return}
+ const d=collect();$("next").disabled=true;
+ try{
+  if(!CONFIG.endpoint)throw 0;
+  await fetch(CONFIG.endpoint,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(d)});
+  $("wiz").classList.add("hide");$("done").classList.remove("hide");window.scrollTo({top:0,behavior:"smooth"});
+ }catch(e){
+  const m=$("msg");m.className="msg show";m.textContent="Chưa gửi tự động được (lỗi kết nối hoặc chưa cấu hình). Bấm “Sao chép nội dung báo cáo” rồi gửi cho cấp ủy Chi bộ.";
+  $("copy").classList.remove("hide");
+ }
+ $("next").disabled=false;
+};
+$("copy").onclick=async()=>{try{await navigator.clipboard.writeText(asText(collect()));$("copy").textContent="Đã sao chép ✔"}catch(e){}};
+$("again").onclick=()=>{$("done").classList.add("hide");$("wiz").classList.remove("hide");go(0)};
+go(0);
+</script>
+</body>
+</html>
